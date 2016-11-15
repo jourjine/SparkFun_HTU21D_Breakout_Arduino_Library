@@ -50,7 +50,7 @@ public:
   HTU21D();
 
   //Public Functions
-  //void begin(TwoWire &wirePort = Wire); //If user doesn't specificy then Wire will be used
+  void begin(TwoWire &wirePort = Wire); //If user doesn't specificy then Wire will be used
   float readHumidity(void);
   float readTemperature(void);
   void setResolution(byte resBits);
@@ -62,7 +62,7 @@ public:
 
 private:
   //Private Functions
-  //TwoWire *_i2cPort; //The generic connection to user's chosen I2C hardware
+  TwoWire *_i2cPort; //The generic connection to user's chosen I2C hardware
 
   byte checkCRC(uint16_t message_from_sensor, uint8_t check_value_from_sensor);
   uint16_t readValue(byte cmd);
