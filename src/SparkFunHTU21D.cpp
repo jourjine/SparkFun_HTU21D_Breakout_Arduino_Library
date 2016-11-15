@@ -35,12 +35,12 @@ HTU21D::HTU21D()
 //Begin
 /*******************************************************************************************/
 //Start I2C communication
-void HTU21D::begin(TwoWire &wirePort)
-{
-  _i2cPort = &wirePort; //Grab which port the user wants us to use
+// void HTU21D::begin(TwoWire &wirePort)
+// {
+//   _i2cPort = &wirePort; //Grab which port the user wants us to use
   
-  _i2cPort->begin();
-}
+//   _i2cPort->begin();
+// }
 
 #define MAX_WAIT 100
 #define DELAY_INTERVAL 10
